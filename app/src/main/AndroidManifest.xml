@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hedenius01">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Einstellungen"
+            android:label="Einstellungen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Moduswahl"
+            android:label="Moduswahl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster"
+            android:label="Spiel Runde 1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ende"
+            android:label="Ende"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Training"
+            android:label="Training Runde 1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster2"
+            android:label="Spiel Runde 2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster3"
+            android:label="Spiel Runde 3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Training2"
+            android:label="Training Runde 2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster4"
+            android:label="Spiel Runde 4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster5"
+            android:label="Spiel Runde 5"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster6"
+            android:label="Spiel Runde 6"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Hauptfenster7"
+            android:label="Spiel Runde 7"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Hauptfenster8"
+            android:label="Spiel Runde 8"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
