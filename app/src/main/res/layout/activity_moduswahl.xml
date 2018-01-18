@@ -26,7 +26,7 @@
                 android:text="Bitte wähle einen MODUS aus."
                 android:textAlignment="center"
                 android:textColor="#8B0000"
-                android:textSize="20sp"
+                android:textSize="40sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
@@ -38,8 +38,9 @@
             <Button
                 android:id="@+id/spiel_btn"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
+                android:layout_height="525dp"
                 android:text="Spiel Modus"
+                android:textSize="60sp"
                 android:layout_marginTop="10dp"
                 android:background="#97FFFF"/>
         </LinearLayout>
@@ -51,8 +52,9 @@
             <Button
                 android:id="@+id/training_btn"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
+                android:layout_height="525dp"
                 android:text="Training Modus"
+                android:textSize="60sp"
                 android:layout_marginTop="5dp"
                 android:background="#FFA54F"/>
 
