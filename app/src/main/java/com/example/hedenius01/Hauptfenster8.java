@@ -85,15 +85,7 @@ public class Hauptfenster8 extends AppCompatActivity {
         /////////////////////////////////////////////////////////////////////////////////////
         img_view.setImageResource(Bilder.images8[imgNumber]);
         //sorgt dafür, dass das Element nach zetElem ms verschwindet und anstatt dessen stelle das Fixationskreuz erscheint
-      /*  final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                img_view.setImageResource(R.drawable.fragezeichen);
-            }
-        }, zeitElem);*/
-
-        //Erfassen der aktuellen Zeit zum späteren messen der benötigten Zeit
+       //Erfassen der aktuellen Zeit zum späteren messen der benötigten Zeit
         saveDateOnStart = new Date(System.currentTimeMillis()).getTime();
 
         imgNumber++;
@@ -126,7 +118,7 @@ public class Hauptfenster8 extends AppCompatActivity {
                 zeit = saveDateOnAnswer - saveDateOnStart;
                 //Die gestoppte Zeit wird in die CSV geschrieben
                 SaveTimeInCsv(zeit, true);
-                Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
 
 
                 if (imgNumber == Bilder.images8.length) {
@@ -154,7 +146,7 @@ public class Hauptfenster8 extends AppCompatActivity {
                 zeit = saveDateOnAnswer - saveDateOnStart;
                 //Die gestoppte Zeit wird in die CSV geschrieben
                 SaveTimeInCsv(zeit, false);
-                Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
 
 
                 if (imgNumber == Bilder.images8.length) {

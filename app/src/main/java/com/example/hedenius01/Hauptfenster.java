@@ -95,8 +95,7 @@ public class Hauptfenster extends AppCompatActivity {
 
     //Methode welche die einzelnen Bilder aus dem array in der Bilder.class setzt und die antworten
     private void updateImage(){
-        //final int zeitElement = (int) getIntent().getExtras().get("zeitElement");
-        //int zeitElem = zeitElement;
+
         /////////////////////////////////////////////////////////////////////////////////////
         //Log.v("MODUSWAHL", "zeitElement im Moduswahl ?"
           //      + zeitElement);
@@ -104,14 +103,6 @@ public class Hauptfenster extends AppCompatActivity {
         Log.v("SPIEL RUNDE1", "Bilder.images[imagesNumber]  " + (Bilder.images[imgNumber] ));
         ///////////////////////////////////////////////////////////////////
         img_view.setImageResource(Bilder.images[imgNumber]);
-        //sorgt dafür, dass das Element nach zetElem ms verschwindet und anstatt dessen stelle das Fixationskreuz erscheint
-        /*final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                img_view.setImageResource(R.drawable.fragezeichen);
-            }
-        }, zeitElem);*/
 
         //Erfassen der aktuellen Zeit zum späteren messen der benötigten Zeit
         saveDateOnStart = new Date(System.currentTimeMillis()).getTime();
@@ -148,7 +139,8 @@ public class Hauptfenster extends AppCompatActivity {
                 //Die gestoppte Zeit und die ausgewählte Antwort wird in die CSV geschrieben
                 SaveTimeInCsv(zeit, true);
 
-                Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
+                //Einkommentieren um die benötigte Zeit pro Runde als Toast angezeigt zu bekommen
+                //Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
 
                     if (imgNumber == Bilder.images.length){
                         Intent intent = new Intent(Hauptfenster.this, Hauptfenster2.class);
@@ -174,8 +166,9 @@ public class Hauptfenster extends AppCompatActivity {
                 zeit = saveDateOnAnswer - saveDateOnStart;
                 //Die gestoppte Zeit wird in die CSV geschrieben
                 SaveTimeInCsv(zeit, false);
-                //SaveSelectInCSV(false);
-                Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
+
+                //Einkommentieren um die benötigte Zeit pro Runde als Toast angezeigt zu bekommen
+                //Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
 
                     if (imgNumber == Bilder.images.length){
                         Intent intent = new Intent(Hauptfenster.this, Hauptfenster2.class);

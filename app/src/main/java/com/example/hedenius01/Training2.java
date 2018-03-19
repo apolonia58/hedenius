@@ -80,18 +80,8 @@ public class Training2 extends AppCompatActivity {
 
     //Methode welche die einzelnen Bilder aus dem array in der Bilder.class setzt
     private void updateImage(){
-        //final int zeitElement = (int) getIntent().getExtras().get("zeitElement");
-        //int zeitElem = zeitElement;
 
         img_view.setImageResource(Bilder.training2images[imgNumber]);
-        //sorgt dafür, dass das Element nach zetElem ms verschwindet und anstatt dessen stelle das Fragezeichen Image erscheint
-        /*final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                img_view.setImageResource(R.drawable.fragezeichen);
-            }
-        }, zeitElem);*/
 
         //Erfassen der aktuellen Zeit zum späteren messen der benötigten Zeit
         saveDateOnStart = new Date(System.currentTimeMillis()).getTime();
@@ -129,7 +119,7 @@ public class Training2 extends AppCompatActivity {
                 //In diesem Fall ausgewählte Antwort ist true, da ja button geklickt
                 SaveTimeInCsv(zeit, true);
 
-                Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
 
                     //richtige Bilderset auswählen
                     if (imgNumber == Bilder.training2images.length){
@@ -157,7 +147,8 @@ public class Training2 extends AppCompatActivity {
                 //Die gestoppte Zeit wird in die CSV geschrieben
                 SaveTimeInCsv(zeit, false);
                 //SaveSelectInCSV(false);
-                Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
+
+                //Toast.makeText(getApplicationContext(), "benötigte Zeit in ms:  " + zeit,Toast.LENGTH_SHORT).show();
 
                     if (imgNumber == Bilder.training2images.length){
                         Intent intent = new Intent(Training2.this, Moduswahl.class);
